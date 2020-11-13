@@ -11,6 +11,7 @@ import { FilterSelectArea } from './FilterSelectArea/FilterSelectArea';
 import { FilterCancelButton } from './FilterCancelButton/FilterCancelButton';
 import { GreenButton } from 'Style';
 import * as reducers from 'Reducer';
+import {Link} from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -186,7 +187,9 @@ const IssueListComponent = () => {
           <MenuHeaderArea>
             <LabelButton count={labelNumber} />
             <MilestoneButton count={milestoneNumber} />
-            <GreenButtonMargin>New Issue</GreenButtonMargin>
+            <Link to="/newIssue">
+              <GreenButtonMargin>New Issue</GreenButtonMargin>
+            </Link>
           </MenuHeaderArea>
         </TopMenuBar>
         <FilterCancelButton />
